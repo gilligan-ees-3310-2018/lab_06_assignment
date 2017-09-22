@@ -1,0 +1,39 @@
+---
+title: "Lab 5: Individual Research Project "
+author: "Jennifer Bradham"
+date: "Lab: 9/25/2017"
+html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+topic_approval_date = "September 29, 2017"
+due_date = "October 9, 2017"
+due_time = "2:10pm"
+```
+
+# Introduction
+
+Lab 5 provides an opportunity to utilize the skills you have learned thus far in lab to explore a research question pertaining to your specific interests. This lab consists of a written lab report in RMarkdown and a presentation to the class. For this project, you will choose a question or idea pertaining to lab 2, lab 3, or lab 4 and explore the topic a deeper. This may consit of exploring the "why" portion of previous questions that only asked you to describe patterns in the data or it may be evaluating relationships between other variables not assesed in prior labs. To answer your question, you may use the any of the data from lab 2, the MODTRAN model, the GEOCARB model, or a combination thereof. Please get your topic approved by either Dr. Gilligan or Ms. Bradham by `r topic_approval_date`. The final project is **due `r due_date` at `r due_time`**.
+
+## Writen Report
+Your report should be comprehensive, yet not overly verbose. One recommendation for achieving this is to create an outline to organize your thoughts before initializing writing and data analysis. The report needs to include the following components:
+
+* Introduction
+    * *Provide background information that frames the problem you are addressing. At the end of the introduction, the reader should understand your justification for completing the project and understand exactly what the problem is you are addressing.*
+* Methods
+    * *Describe the methods for answering your question. The methods section should be written such that someone completely unfamiliar with your project could follow your steps and recreate your results.*
+* Results
+    * *Describe the results of your analyses. Include apropriate charts, tables, graphs, and other quantitative representations of data.* 
+* Conclusions/Discussion
+    * *Discuss the implications for the results you found using data from your results section. Why are these results significant or interesting? What data supports these conclusions? What are the broader implications of these results? From the results that you have found, what are the next steps to take in this line of research? What other questions have arisen as a result of your analyses?*
+* Works Cited
+    * *Include a works cited section to credit the research and thoughts that are not your own. Be sure to use parenthetical citation throughout your report where necessary.*
+
+Final reports are to be pushed to your Lab 5 Github repository no later than `r due_time` on `r due_date`. **You must push the .Rmd file ***and*** the knitted PDF** to Github. A portion of your final report grade will reflect effective use of R/RMarkdown/Github, the clarity and succinctness of your writing, visual representations of data, appropriate discussion of results, and insights into future analyses. 
+
+## Presentation
+Presentations can be done in powerpoint or through creation of slides in RMarkdown and will be limited to five minutes per student. Allot approximately 3.5 to 4 minutes for the presentation of your project and approximately 1 minute for questions. In addition the the final report, a PDF of your final presentation also needs to be pushed to Github no later than `r due_time` on `r due_date`. 
+
+**Be CrEaTiVe!** Now is the time to really explore parts of the class that you have found interesting and present your findings in a unique, exciting way. 
