@@ -6,3 +6,10 @@
 cache/
 *_cache/
 *_files/
+*.aux
+*.bib
+*.out
+*.log
+*.blg
+*.synctex.gz
+Corel Auto-Preserve/
