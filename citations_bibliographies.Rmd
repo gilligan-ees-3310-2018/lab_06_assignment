@@ -69,7 +69,7 @@ add-ins that integrate very nicely with most browsers (Chrome, Firefox, Safari,
 and Opera) and also has a good add-in to let you use it in 
 Microsoft Word. Zotero has hundreds of bibliography styles for different 
 uses, including standard ones, such as Chicago, APA, and MLS.
-You can get Zotero from <https://www.zotero.org>. One reason I like Zotero 
+You can get Zotero from <https://zotero.org>. One reason I like Zotero 
 enormously is that the web browser add-in creates an icon in the browser's 
 toolbar that recognizes when you are reading an article in a scholarly journal,
 a newspaper, a magazine, a blog, etc., and you can just click on the icon to import 
@@ -100,12 +100,38 @@ most bibliographic software packages, such as EndNote, Mendeley, and Zotero.
 
 In your document, you can cite books, articles, etc. by the identifiers, or 
 _keys_, that appear in the database.[^3] 
-For instance, in the example bibliography 
-file `lab_05.bib`, the textbook, _Global Warming: Understanding the Forecast_
-has the key `archer.forecast.2011`.[^3] 
+If you open the bibliography file in RStudio, you will see that all references
+begin with a reference type, starting with `@` (e.g., `@book` for a book,
+`@article` for an article in a journal, etc.) and then all the data for the 
+reference is contained between a pair of braces `{...}`.
+The first thing after the opening brace will be the citation key,
+followed by a comma:
+```
+@book{archer.forecast.2011,
+  title = {Global Warming: Understanding the Forecast},
+  author = {Archer, David},
+  publisher = {Wiley},
+  address = {Hoboken, NJ},
+  year = {2011},
+  edition = {2nd}
+}
+
+@article{rogelj2013probabilistic,
+  title={Probabilistic cost estimates for climate change mitigation},
+  author={Rogelj, Joeri and McCollum, David L and Reisinger, Andy and 
+          Meinshausen, Malte and Riahi, Keywan},
+  journal={Nature},
+  volume={493},
+  pages={79--83},
+  year={2013},
+}
+```
+The citation keys for these two references are 
+`archer.forecast.2011` and `rogelj2013probabilistic`.
+
 [^3]: In BibTeX files, the identifiers can
 be any sequence of letters, numbers, and any of the following punctuation:
-`_`, `.`, `:`, `;`.
+'`_`', '`.`', '`:`', and '`;`'.
 
 
 I can insert citations in an RMarkdown document by putting them inside
@@ -169,10 +195,70 @@ It will not automatically put a section heading, so you probably want to put
 a section heading called "Bibliography" or "Works Cited" to set this off
 from your text. 
 
-Below, I have inserted the line
+At the bottom of this `.Rmd` file, I have inserted the line
 ```
 # References
 ```
+
+## Adding entries to the bibliography file
+
+If you want to add new references to the bibliography file, you can 
+open `lab_05.bib` in RStudio and edit it by hand, but that may be difficult
+and confusing, so I would recommend one of three options:
+
+* From Google Scholar, you can export a BibTeX entry: 
+
+    1. Open `lab_05.bib` in RStudio and then open a web browser, go to 
+       <https://scholar.google.com> and search for your reference.
+
+    2. When you find the reference you want in Google Scholar, and click on the 
+       "Cite" button, as shown below:
+
+        ![Google Scholar search page. Click on the "Cite" button, as shown here.](images/scholar_1.png)\
+
+    3. Click on "BibTeX" at the bottom of the citation page, as shown below:
+
+        ![Google Scholar citation page: Click on "BibTeX"](images/scholar_2.png)\
+
+    4. You will see something like this:
+
+        ```
+         @article{rogelj2012global,
+          title={Global warming under old and new scenarios using IPCC climate 
+                 sensitivity range estimates},
+          author={Rogelj, Joeri and Meinshausen, Malte and Knutti, Reto},
+          journal={Nature climate change},
+          volume={2},
+          number={4},
+          pages={248},
+          year={2012},
+          publisher={Nature Publishing Group}
+        }
+        ```
+        
+         Copy the entry and paste it into `lab_05.bib` in RStudio.
+         
+         In this entry, `rogelj2012global` is the key you would use
+         for citing and the other fields are pretty much self-explanatory.
+
+* If you have a bibliographic program like Zotero, Mendeley, or EndNote, 
+  export the references you want as BibTeX files.
+   
+     For instance, in Zotero,[^5] highlight the references, right click, and from 
+     the context menu choose "Export Items..."; then select "BibTeX" format, 
+     click "OK" and save the exported items to a file.)
+    
+     Next, open the file you just exported and `lab_05.bib` in RStudio and
+     copy and past the references from the exported file into `lab_05.bib`.
+     
+* If you have JabRef[^6] installed on your computer, you open `lab_05.bib`,
+  manually create a new bibliographic entry and fill in the relevant data.
+  
+[^5]: Zotero is free software that runs on Windows, MacOS, and Linux, and you
+can download it from <https://zotero.org>
+
+[^6]: JabRef is free software that runs on Windows, MacOS, and Linux and you can
+download it from <https://jabref.org>.
 
 
 # References
