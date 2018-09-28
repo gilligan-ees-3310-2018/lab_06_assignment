@@ -1,8 +1,8 @@
 ---
 title: "Citations and Bibliographies"
 author: "Jonathan Gilligan"
-date: "September 25, 2017"
-bibliography: "lab_05.bib"
+date: "September 27, 2018"
+bibliography: "lab_06.bib"
 output:
   pdf_document:
     includes:
@@ -34,7 +34,7 @@ just add a line to the header of your RMarkdown document: for instance,
 title: "My Lab Report"
 subtitle: "EES 3310: Global Climate Change"
 author: "Jonathan Gilligan"
-date: "Sept. 25, 2017"
+date: "Sept. 27, 2018"
 bibliography: "my_bibliography.bib"
 ---
 ```
