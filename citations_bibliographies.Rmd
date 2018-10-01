@@ -15,13 +15,42 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 # Introduction
 
+
+The simplest way to do citations and bibliographies in RMarkdown is simply
+to use author-date citation like this:
+
+> The Urey reaction (Archer 2011, p. 98) shows how silicate weathering can
+> convert atmospheric carbon (in the form of CO~2~) into rocks at the bottom
+> of the ocean (in the form of CaCO~3~).
+
+And then just manually enter a bibliography at the end of the document:
+
+> * Archer, David (2011). _Global Warming: Understanding the Forecast_
+>   (Wiley)
+>
+> * Rogelj, Joeri, McCollum, David L., Reisinger, Andy, Meinshausen, Malte,
+>   and Riahi, Keywan (2013). 
+>   Probabilistic cost estimates for climate change mitigation,
+>   _Nature_ **493**, 79--83.
+
+## Getting fancy with citations and bibliographies
+
+However, if you want to experiment with something fancier, 
 RMarkdown has the ability to automatically format bibliographic information and
 manage citations. Using this is a little complicated because you need to have
-file with your bibliographic information entered in a certain format. Fortunately,
-RMarkdown can work with a wide variety of file formats, including those produced
-by many common software packages, such as EndNote, Zotero, and Mendeley.
+file with your bibliographic information entered in a certain format. 
+
+Everything that follows describes how to do citations and bibliographies
+with RMarkdown using bibliography files. If you wish, you may ignore the
+rest of this document and manage your citations and bibliographies manually,
+as described at the top of this file.
+
+RMarkdown can work with a wide variety of file formats for bibliographies, 
+including those produced by many common software packages, such as 
+EndNote, Zotero, and Mendeley.
 You can find further documentation about bibliographies and citations
 at <http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html>
+
 
 # Bibliography Files
 
@@ -39,9 +68,9 @@ bibliography: "my_bibliography.bib"
 ---
 ```
 
-RMarkdown can figure out the kind of bibliography file it is from the file extension
-(`.bib`, etc.). I have provided an example BibTeX file, `lab_05.bib` that
-has examples of entries.
+RMarkdown can figure out the kind of bibliography file it is from the file 
+extension (`.bib`, etc.). I have provided an example BibTeX file, `lab_05.bib` 
+that has examples of entries.
 
 For the examples here, I will work with a format called BibTeX because most
 common software packages can export bibliographies in BibTeX format, and 
@@ -72,9 +101,10 @@ uses, including standard ones, such as Chicago, APA, and MLS.
 You can get Zotero from <https://zotero.org>. One reason I like Zotero 
 enormously is that the web browser add-in creates an icon in the browser's 
 toolbar that recognizes when you are reading an article in a scholarly journal,
-a newspaper, a magazine, a blog, etc., and you can just click on the icon to import 
-whatever you're reading in your browser into your bibliography database.
-You can also sign up for a free account on <https://www.zotero.org/user/register>
+a newspaper, a magazine, a blog, etc., and you can just click on the icon to 
+import whatever you're reading in your browser into your bibliography database.
+You can also sign up for a free account on 
+<https://www.zotero.org/user/register>
 that will let you back up your bibliography database to the cloud, synchronize
 your bibliographies across multiple computers, and share bibliographies with 
 other people.
